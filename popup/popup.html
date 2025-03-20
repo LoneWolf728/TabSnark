@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Passive-Aggressive Tab Manager</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Tab Monitor</h1>
+    
+    <div class="stat-container">
+      <div class="stat-box">
+        <div class="stat-value" id="tabCount">0</div>
+        <div class="stat-label">Open Tabs</div>
+      </div>
+    </div>
+    
+    <div class="message-container">
+      <p id="message">You're doing great! (For now...)</p>
+    </div>
+    
+    <div class="settings">
+      <h2>Sass Level</h2>
+      <select id="sassLevel">
+        <option value="mild">Mild</option>
+        <option value="medium">Medium</option>
+        <option value="spicy">Spicy</option>
+        <option value="brutal">Brutal Honesty</option>
+      </select>
+      
+      <div class="thresholds">
+        <h2>Alert Thresholds</h2>
+        <div class="threshold-row">
+          <label for="mildThreshold">Mild:</label>
+          <input type="number" id="mildThreshold" min="1" max="99" value="5">
+        </div>
+        <div class="threshold-row">
+          <label for="mediumThreshold">Medium:</label>
+          <input type="number" id="mediumThreshold" min="1" max="99" value="10">
+        </div>
+        <div class="threshold-row">
+          <label for="severeThreshold">Severe:</label>
+          <input type="number" id="severeThreshold" min="1" max="99" value="20">
+        </div>
+        <div class="threshold-row">
+          <label for="criticalThreshold">Critical:</label>
+          <input type="number" id="criticalThreshold" min="1" max="99" value="30">
+        </div>
+      </div>
+      
+      <button id="saveSettings">Save Settings</button>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
